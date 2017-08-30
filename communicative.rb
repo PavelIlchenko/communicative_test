@@ -25,11 +25,11 @@ puts "Введите '1' - если да, '2' - нет, '3' - иногда"
 questions = user.questions(file_path_questions)
 
 #задаем вопросы в переборке массива и там же считаем баллы.
-for question in questions
-  puts question
+questions.each {|elem|
+  puts elem
   user.answer
   puts "Ваш текущий балл #{user.answer_points}"
-end
+}
 
 # while count != 16
 #   puts questions[count]
